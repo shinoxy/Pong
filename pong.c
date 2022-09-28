@@ -1,4 +1,4 @@
-// Copyright 2022 School 21
+// Copyright 2022 Shinoxy at School 21
 
 #include <stdio.h>
 #include <stdlib.h>
