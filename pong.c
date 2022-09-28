@@ -22,32 +22,28 @@ int main() {
     while (score_1 <= 21 || score_2 <= 21) {
         char action = ' ';
             if (action == 'a' || action == 'A') {
-                if (racket_1 <= 2) {
+                if (racket_1 <= 2)
                     printf(" ");
-                } else {
+                else
                     racket_1--;
-                }
             }
             if (action == 'z' || action == 'Z') {
-                if (racket_1 >=22) {
+                if (racket_1 >=22)
                     printf(" ");
-                } else {
+                else
                     racket_1++;
-                }
             }
             if (action == 'k' || action == 'K') {
-                if (racket_2 <= 2) {
+                if (racket_2 <= 2)
                     printf(" ");
-                } else {
+                else
                     racket_2--;
-                }
             }
             if (action == 'm' || action == 'M') {
-                if (racket_2 >=22) {
+                if (racket_2 >=22)
                     printf(" ");
-                } else {
+                else
                     racket_2++;
-                }
             }
             if (action == 'q' || action == 'Q') {  // Press to quit the game
                 printf("\nSee you later!");
@@ -88,22 +84,22 @@ void renderMap(int racket_1, int racket_2,
                     if (x == 1 || x == 80) {
                         printf("#");
                     } else {
-                    if (y == ball_y && x == ball_x) {
-                        printf("o");
-                        continue;
-                    }
-                    if (x == 40)
-                        printf("|");
-                    else if ((x == 5 && y == racket_1) ||
-                             (x == 5 && y == racket_1 + 1) ||
-                             (x == 5 && y == racket_1 + 2))
-                        printf("|");
-                    else if ((x == 76 && y == racket_2) ||
-                             (x == 76 && y == racket_2 + 1) ||
-                             (x == 76 && y == racket_2 + 2))
-                        printf("|");
-                    else
-                        printf(" ");
+                        if (y == ball_y && x == ball_x) {
+                            printf("o");
+                            continue;
+                        }
+                        if (x == 40)
+                            printf("|");
+                        else if ((x == 5 && y == racket_1) ||
+                                 (x == 5 && y == racket_1 + 1) ||
+                                 (x == 5 && y == racket_1 + 2))
+                            printf("|");
+                        else if ((x == 76 && y == racket_2) ||
+                                 (x == 76 && y == racket_2 + 1) ||
+                                 (x == 76 && y == racket_2 + 2))
+                            printf("|");
+                        else
+                            printf(" ");
                     }
             }
         }
@@ -115,9 +111,8 @@ void MoveBall(int* ball_x, int* ball_y,
               int* vector_x, int* vector_y,
               int* racket_1, int* racket_2,
               int* score_1, int* score_2) {
-    if (*ball_y == 2 || *ball_y == 24) {
+    if (*ball_y == 2 || *ball_y == 24)
         *vector_y *= -1;
-    }
     if (*ball_x == 6 &&
         (*ball_y == *racket_1 + 1 ||
          *ball_y == *racket_1 + 2 ||
